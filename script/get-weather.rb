@@ -6,6 +6,11 @@ weather_url = "/free/v1/weather.ashx?key="
 weather_url += api_key
 weather_url += "&num_of_days=7"
 
+def very_nice_day(precipMM, tempMinC, tempMaxC, weatherCode, windspeedKmph)
+	return (precipMM == 0 and tempMinC >= 10 and tempMaxC >= 18 and \
+		tempMaxC <= 28 and weatherCode <= 116 and windspeedKmph <= 15)
+end
+
 def nice_day(precipMM, tempMinC, tempMaxC, weatherCode, windspeedKmph)
 	return (precipMM == 0 and tempMinC >= 10 and tempMaxC <= 30 \
 		and weatherCode <= 116 and windspeedKmph <= 20)
@@ -19,10 +24,12 @@ end
 def score_weather(*args)
 	args = args.collect{|x| x.to_i}
 
+	if very_nice_day(*args)
+		return 1.1
 	if nice_day(*args)
 		return 1
 	elsif ok_day(*args)
-		return 0.5
+		return 0.49
 	else
 		return 0
 	end
