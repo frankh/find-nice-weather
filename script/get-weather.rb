@@ -26,7 +26,7 @@ def score_weather(*args)
 
 	if very_nice_day(*args)
 		return 1.1
-	if nice_day(*args)
+	elsif nice_day(*args)
 		return 1
 	elsif ok_day(*args)
 		return 0.49
