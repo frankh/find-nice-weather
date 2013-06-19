@@ -44,7 +44,6 @@ File.open("weather-geocoded-uk-towns", "w") do |out|
 			town, lat, long = line.strip.split(/,/)
 			print town + "\n"
 			req_url = weather_url + "&q=" + lat+","+long+"&format=json"
-			print req_url + "\n"
 			resp = Net::HTTP.get_response('api.worldweatheronline.com', req_url)
 			json_resp = JSON.parse(resp.body)
 			out.write("#{town},#{lat},#{long}||")
@@ -59,11 +58,12 @@ File.open("weather-geocoded-uk-towns", "w") do |out|
 				out.write("||")
 			}
 			out.write("\n")
-			print "Score is #{total_score}"
+			print "Score is #{total_score}\n"
 			if total_score > max_score
 				max_score = total_score
-				print "Max score is #{max_score}"
+				print "Max score is #{max_score}\n"
 			end
+			print "\n"
 			sleep(1)
 		end
 	end
