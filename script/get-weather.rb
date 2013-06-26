@@ -25,7 +25,7 @@ def score_weather(*args)
 	args = args.collect{|x| x.to_f}
 
 	if very_nice_day(*args)
-		return 1.1
+		return 1.3
 	elsif nice_day(*args)
 		return 1
 	elsif ok_day(*args)
