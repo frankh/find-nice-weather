@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  lng: MyString
+  lat: MyString
+  weather_update: 2013-07-05 17:36:41
+
+two:
+  name: MyString
+  lng: MyString
+  lat: MyString
+  weather_update: 2013-07-05 17:36:41

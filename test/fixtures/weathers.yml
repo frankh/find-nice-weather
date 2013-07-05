@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  town_id: 
+  date: 2013-07-05 17:37:57
+  min_temp: 
+  max_temp: 
+  precip_mm: 
+  wind_spd: 
+  weather_code: 
+
+two:
+  town_id: 
+  date: 2013-07-05 17:37:57
+  min_temp: 
+  max_temp: 
+  precip_mm: 
+  wind_spd: 
+  weather_code: 
