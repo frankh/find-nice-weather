@@ -10,10 +10,10 @@
 
 Town.delete_all
 Weather.delete_all
-open("weather-geocoded-uk-towns") do |towns|
+open("db/weather-geocoded-uk-towns") do |towns|
 	towns.read.each_line do |town_info|
 		town, *weather = town_info.chomp.split('||')
-		town_name, lat, lng = town.split(',')
+		name, lat, lng = town.split(',')
 
 		town = Town.create!(:name => name, :lat => lat, :lng => lng)
 		weather.each do |w|
