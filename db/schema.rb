@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130705153755) do
+ActiveRecord::Schema.define(version: 20130717133152) do
 
   create_table "towns", force: true do |t|
     t.string   "name"
@@ -20,7 +20,10 @@ ActiveRecord::Schema.define(version: 20130705153755) do
     t.datetime "weather_update"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "weather_score"
   end
+
+  add_index "towns", ["weather_score"], name: "index_towns_on_weather_score"
 
   create_table "weather", force: true do |t|
     t.integer  "town_id"
