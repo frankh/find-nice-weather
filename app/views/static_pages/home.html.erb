@@ -5,7 +5,7 @@
 <li>
   <%= town.name%>
   <% town.weather.each do |w| %>
-    <%= w.min_temp %>
+    <%= w.max_temp %>(<%= w.weather_code %>)
   <% end %>
 </li>
 <% end %>
