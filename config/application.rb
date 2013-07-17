@@ -111,7 +111,7 @@ module FindNiceWeather
       rescue Exception => e
         puts e
       end
-      sleep 5
+      sleep 8
     end
   end
 
